@@ -1,0 +1,29 @@
+
+
+> @nexus-archive/web@0.0.1 build /home/dvtzoe/me/nexus-archive/apps/web
+> astro build
+
+[2m21:20:28[22m [34m[content][39m Syncing content
+[2m21:20:28[22m [34m[content][39m Synced content
+[2m21:20:28[22m [34m[types][39m Generated [2m217ms[22m
+[2m21:20:28[22m [34m[build][39m output: [34m"static"[39m
+[2m21:20:28[22m [34m[build][39m mode: [34m"static"[39m
+[2m21:20:28[22m [34m[build][39m directory: [34m/home/dvtzoe/me/nexus-archive/apps/web/dist/[39m
+[2m21:20:28[22m [34m[build][39m Collecting build info...
+[2m21:20:28[22m [34m[build][39m [32m✓ Completed in 234ms.[39m
+[2m21:20:28[22m [34m[build][39m Building static entrypoints...
+[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2m21:20:29[22m [34m[vite][39m [32m✓ built in 857ms[39m
+[2m21:20:29[22m [34m[build][39m [32m✓ Completed in 902ms.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2K[1Gtransforming (1) [2mnode_modules/.pnpm/@astrojs+react@4.3.1_@types+node@24.3.1_@types+react-dom@19.1.9_@types+react@19.1.12__@_255abef39ca31f4a694044a1390605ec/node_modules/@ast[2K[1Gtransforming (4) [2mnode_modules/.pnpm/react@19.1.1/node_modules/react/index.js[22m[2K[1G[2m21:20:30[22m [34m[vite][39m [32m✓[39m 21 modules transformed.
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (0)...[2K[1Gcomputing gzip size (1)...[2K[1G[2m21:20:30[22m [34m[vite][39m [2mdist/[22m[2m_astro/[22m[36mclient.DL-_0xdV.js  [39m[1m[2m187.44 kB[22m[1m[22m[2m │ gzip: 58.99 kB[22m
+[2m21:20:30[22m [34m[vite][39m [32m✓ built in 687ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m21:20:30[22m [32m▶[39m src/pages/index.astro
+[2m21:20:30[22m   [34m└─[39m [2m/index.html[22m [2m(+8ms)[22m 
+[2m21:20:30[22m [32m✓ Completed in 45ms.
+[39m
+[2m21:20:30[22m [34m[build][39m 1 page(s) built in [1m1.88s[22m
+[2m21:20:30[22m [34m[build][39m [1mComplete![22m
