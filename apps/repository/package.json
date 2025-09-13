@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {},
   "dependencies": {
+    "@fastify/cors": "^11.1.0",
     "@nexus-archive/types": "workspace:*",
     "fastify": "^5.6.0"
   },
