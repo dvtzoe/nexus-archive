@@ -6,12 +6,22 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"includes": ["*.ts", "*.js", "*.tsx", "*.jsx", "!**/node_modules"],
+		"includes": [
+			"*.ts",
+			"*.js",
+			"*.tsx",
+			"*.jsx",
+			"!**/node_modules/",
+			"!apps/web/src/**/*.astro",
+			"!**/dist/",
+			"!**/.turbo/"
+		],
 		"ignoreUnknown": false
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"indentStyle": "space",
+		"indentWidth": 2
 	},
 	"linter": {
 		"enabled": true,
