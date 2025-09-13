@@ -1,5 +1,6 @@
 {
   "name": "@nexus-archive/types",
+  "type": "module",
   "version": "0.1.0",
   "description": "types for nexus-archive",
   "main": "./dist/index.js",

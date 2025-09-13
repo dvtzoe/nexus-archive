@@ -1,7 +1,7 @@
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
 
-import { NexusNode } from '@nexus-archive/types'
+import { type NexusNode } from '@nexus-archive/types'
 
 const fastify = Fastify({ logger: true })
 
@@ -33,3 +33,14 @@ fastify.get('/api/nodes/:id', async (request, reply) => {
     reply.status(404).send({ error: 'Node not found' })
   }
 })
+
+const start = async () => {
+  try {
+    await fastify.listen({ port: 3000, host: process.env.HOST || 'localhost' })
+    console.log('Server is running at http://localhost:3000')
+  } catch (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+}
+start()
