@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "dev": "turbo dev",
+    "dev:web": "pnpm -rF @nexus-archive/web run dev",
     "build": "turbo build",
+    "build:web": "pnpm -rF @nexus-archive/web run build",
     "lint": "turbo lint",
     "test": "turbo test",
     "clean": "turbo clean",
