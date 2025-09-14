@@ -8,7 +8,9 @@
     "build": "tsc",
     "dev": "tsc --watch & nodemon --watch ./dist --exec node ./dist/server.js",
     "start": "node ./dist/server.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
