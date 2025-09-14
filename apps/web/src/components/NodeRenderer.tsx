@@ -1,6 +1,6 @@
 const NodeRenderer = async ({ repo, node }: { repo?: string, node?: string }) => {
-  if (!node) {
-    return <div>No node ID provided</div>;
+  if (!node || !repo) {
+    return <div>Must specify both repo and node</div>;
   }
 
   let response = await fetch('http://localhost:3000/api/nodes/' + node)
