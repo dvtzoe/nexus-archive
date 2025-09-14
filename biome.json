@@ -7,14 +7,11 @@
   },
   "files": {
     "includes": [
-      "apps/repository/**/*.ts",
-      "apps/repository/**/*.js",
-      "apps/repository/**/*.tsx",
-      "apps/repository/**/*.jsx",
-      "packages/**/*.ts",
-      "packages/**/*.js",
-      "packages/**/*.tsx",
-      "packages/**/*.jsx"
+      "**/*.ts",
+      "**/*.js",
+      "**/*.tsx",
+      "**/*.jsx",
+      "!apps/web/**/*"
     ],
     "ignoreUnknown": true
   },
