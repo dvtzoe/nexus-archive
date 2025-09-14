@@ -1,22 +1,22 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
   "vcs": {
-    "enabled": false,
+    "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": false
+    "useIgnoreFile": true
   },
   "files": {
     "includes": [
-      "*.ts",
-      "*.js",
-      "*.tsx",
-      "*.jsx",
-      "!**/node_modules/",
-      "!apps/web/src/**/*.astro",
-      "!**/dist/",
-      "!**/.turbo/"
+      "apps/repository/**/*.ts",
+      "apps/repository/**/*.js",
+      "apps/repository/**/*.tsx",
+      "apps/repository/**/*.jsx",
+      "packages/**/*.ts",
+      "packages/**/*.js",
+      "packages/**/*.tsx",
+      "packages/**/*.jsx"
     ],
-    "ignoreUnknown": false
+    "ignoreUnknown": true
   },
   "formatter": {
     "enabled": true,
