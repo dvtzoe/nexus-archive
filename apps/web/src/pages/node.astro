@@ -1,0 +1,13 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NodeRenderer from "@/components/NodeRenderer";
+
+const { url } = Astro;
+console.log(url.searchParams);
+const repo = url.searchParams.get("repo") || "";
+const node = url.searchParams.get("node") || "";
+---
+
+<Layout>
+  <NodeRenderer repo={repo} node={node} />
+</Layout>
