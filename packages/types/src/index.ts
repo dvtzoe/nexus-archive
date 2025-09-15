@@ -1,6 +1,7 @@
 export interface NexusNode {
   content: string;
   id: string;
+  isEntryPoint?: boolean;
 }
 
 export interface Link {
