@@ -1,3 +1,5 @@
+import { type NodePointer } from "@nexus-archive/types";
+
 const NodeRenderer = async ({
   repo,
   node,
@@ -16,10 +18,10 @@ const NodeRenderer = async ({
     baseUrl = "http://localhost:3000";
   }
 
-  let response;
+  let nodePointerResponse;
   try {
-    response = await fetch(baseUrl + "/api/nodes/" + node);
-    if (!response.ok) {
+    nodePointerResponse = await fetch(baseUrl + "/api/node/" + node);
+    if (!nodePointerResponse.ok) {
       return <div>Error fetching node data</div>;
     }
   } catch (error) {
@@ -28,8 +30,22 @@ const NodeRenderer = async ({
     return <div>Error fetching node data: {errorMessage}</div>;
   }
 
-  let nodeData = await response.json();
-  let nodeContent = nodeData.content;
+  let nodeData: NodePointer = await nodePointerResponse.json();
+  let nodeAddress = nodeData.address;
+
+  let nodeContentResponse;
+  try {
+    nodeContentResponse = await fetch(nodeAddress);
+    if (!nodeContentResponse.ok) {
+      return <div>Error fetching node content</div>;
+    }
+  } catch (error) {
+    console.error("Fetch error:", error);
+    let errorMessage = error instanceof Error ? error.message : String(error);
+    return <div>Error fetching node content: {errorMessage}</div>;
+  }
+
+  let nodeContent = await nodeContentResponse.text();
 
   return <div dangerouslySetInnerHTML={{ __html: nodeContent }} />;
 };

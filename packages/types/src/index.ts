@@ -1,7 +1,7 @@
-export interface NexusNode {
-  content: string;
+export interface NodePointer {
   id: string;
   isEntryPoint?: boolean;
+  address: string;
 }
 
 export interface Link {
