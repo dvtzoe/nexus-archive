@@ -9,7 +9,8 @@
     "start": "astro preview",
     "astro": "astro",
     "lint": "prettier --check .",
-    "lint:fix": "prettier --write ."
+    "lint:fix": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.1",
