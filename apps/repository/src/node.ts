@@ -1,5 +1,5 @@
 import type { NodePointer } from "@nexus-archive/types";
-import type Fastify from "fastify";
+import type * as Fastify from "fastify";
 
 const nodeApi = (fastify: Fastify.FastifyInstance) => {
   // TODO: Replace with a real database
@@ -27,6 +27,7 @@ const nodeApi = (fastify: Fastify.FastifyInstance) => {
       return node;
     } else {
       reply.status(404).send({ error: "Node not found" });
+      return;
     }
   });
 };

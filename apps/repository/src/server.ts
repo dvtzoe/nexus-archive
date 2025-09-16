@@ -1,9 +1,9 @@
 import cors from "@fastify/cors";
-import Fastify from "fastify";
+import * as Fastify from "fastify";
 import entryPointsApi from "./entry_points.js";
 import nodeApi from "./node.js";
 
-const fastify = Fastify({ logger: true });
+const fastify = Fastify.fastify({ logger: true });
 
 // Register CORS
 fastify.register(cors, {

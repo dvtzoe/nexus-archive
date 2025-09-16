@@ -1,4 +1,4 @@
-import type Fastify from "fastify";
+import type * as Fastify from "fastify";
 
 const entryPointsApi = (fastify: Fastify.FastifyInstance) => {
   // TODO: Replace with a real database
