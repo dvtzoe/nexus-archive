@@ -12,11 +12,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@nexus-archive/ui/components",
-    "hooks": "@nexus-archive/ui/hooks",
-    "lib": "@nexus-archive/ui/lib",
-    "ui": "@nexus-archive/ui/components/ui",
-    "utils": "@nexus-archive/ui/lib/utils"
+    "components": "@ui/components",
+    "hooks": "@ui/hooks",
+    "lib": "@ui/lib",
+    "ui": "@ui/components/ui",
+    "utils": "@ui/lib/utils"
   },
   "registries": {}
 }
