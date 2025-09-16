@@ -18,6 +18,7 @@
     "format": "pnpm lint:fix",
     "test": "turbo test",
     "clean": "turbo clean",
+    "start:web": "pnpm -rF @nexus-archive/web run start",
     "start:repo": "pnpm -rF @nexus-archive/repository run start"
   },
   "packageManager": "pnpm@10.15.1",
