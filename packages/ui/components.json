@@ -5,17 +5,17 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "src/styles/global.css",
+    "css": "",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@nexus-archive/ui",
-    "utils": "@nexus-archive/ui/lib/utils",
-    "ui": "@nexus-archive/ui",
-    "lib": "@nexus-archive/ui/lib",
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components",
+    "lib": "@/lib",
     "hooks": "@/hooks"
   },
   "registries": {}
