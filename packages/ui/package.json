@@ -11,6 +11,9 @@
     "lint:fix": "biome check --write .",
     "typecheck": "tsc --noEmit"
   },
+  "files": [
+    "dist"
+  ],
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
     "class-variance-authority": "^0.7.1",
