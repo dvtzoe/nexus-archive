@@ -20,6 +20,9 @@
         "^build"
       ]
     },
+    "lint:fix": {
+      "cache": false
+    },
     "test": {
       "dependsOn": [
         "^build"

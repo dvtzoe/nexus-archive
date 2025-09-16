@@ -14,7 +14,7 @@
     "build:web": "pnpm -rF @nexus-archive/web run build",
     "build:repo": "pnpm -rF @nexus-archive/repository run build",
     "lint": "turbo lint",
-    "lint:fix": "pnpm --stream --parallel -r run lint:fix",
+    "lint:fix": "turbo lint:fix",
     "format": "pnpm lint:fix",
     "test": "turbo test",
     "clean": "turbo clean",
