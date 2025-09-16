@@ -1,10 +1,4 @@
 {
-  "extends": [
-    "../../tsconfig.json",
-    "astro/tsconfigs/strict",
-  ],
-  "include": [
-    ".astro/types.d.ts",
-    "**/*",
-  ],
+  "extends": ["../../tsconfig.json", "astro/tsconfigs/strict"],
+  "include": [".astro/types.d.ts", "**/*"]
 }

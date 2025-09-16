@@ -1,4 +1,5 @@
-import { type NodePointer } from "@nexus-archive/types";
+import type { NodePointer } from "@types";
+import DOMPurify from "dompurify";
 
 const NodeRenderer = async ({
   repo,
@@ -11,29 +12,24 @@ const NodeRenderer = async ({
     ["default", "http://localhost:3000"],
   ]);
 
-  let baseUrl;
-  if (repo) {
-    baseUrl = REPO.get(repo) || "http://localhost:3000";
-  } else {
-    baseUrl = "http://localhost:3000";
-  }
+  const baseUrl = REPO.get(repo || "default") || "http://localhost:3000";
 
-  let nodePointerResponse;
+  let nodePointerResponse: Response;
   try {
-    nodePointerResponse = await fetch(baseUrl + "/api/node/" + node);
+    nodePointerResponse = await fetch(`${baseUrl}/api/node/${node}`);
     if (!nodePointerResponse.ok) {
       return <div>Error fetching node data</div>;
     }
   } catch (error) {
     console.error("Fetch error:", error);
-    let errorMessage = error instanceof Error ? error.message : String(error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return <div>Error fetching node data: {errorMessage}</div>;
   }
 
-  let nodeData: NodePointer = await nodePointerResponse.json();
-  let nodeAddress = nodeData.address;
+  const nodeData: NodePointer = await nodePointerResponse.json();
+  const nodeAddress = nodeData.address;
 
-  let nodeContentResponse;
+  let nodeContentResponse: Response;
   try {
     nodeContentResponse = await fetch(nodeAddress);
     if (!nodeContentResponse.ok) {
@@ -41,13 +37,18 @@ const NodeRenderer = async ({
     }
   } catch (error) {
     console.error("Fetch error:", error);
-    let errorMessage = error instanceof Error ? error.message : String(error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return <div>Error fetching node content: {errorMessage}</div>;
   }
 
-  let nodeContent = await nodeContentResponse.text();
+  const nodeContent = await nodeContentResponse.text();
 
-  return <div dangerouslySetInnerHTML={{ __html: nodeContent }} />;
+  return (
+    <div
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: sanitized with DOMPurify
+      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(nodeContent) }}
+    />
+  );
 };
 
 export default NodeRenderer;
