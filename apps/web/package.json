@@ -12,7 +12,16 @@
     "lint:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
   },
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./layouts/*": "./src/layouts/*",
+    "./pages/*": "./src/pages/*"
+  },
   "dependencies": {
+    "@astrojs/node": "^9.4.4",
     "@astrojs/react": "^4.3.1",
     "@nexus-archive/types": "workspace:*",
     "@nexus-archive/ui": "workspace:*",

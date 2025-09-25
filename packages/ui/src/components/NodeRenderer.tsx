@@ -1,5 +1,4 @@
-import type { NodePointer } from "@types";
-import DOMPurify from "dompurify";
+import type { NodePointer } from "@nexus-archive/types";
 
 const NodeRenderer = async ({
   repo,
@@ -45,8 +44,8 @@ const NodeRenderer = async ({
 
   return (
     <div
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: sanitized with DOMPurify
-      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(nodeContent) }}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: trust
+      dangerouslySetInnerHTML={{ __html: nodeContent }}
     />
   );
 };

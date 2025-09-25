@@ -1,33 +1,15 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "nodenext",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "baseUrl": ".",
-    "paths": {
-      "@repo/*": [
-        "./apps/repo/src/*",
-      ],
-      "@web/*": [
-        "./apps/web/src/*",
-      ],
-      "@types/*": [
-        "./packages/types/src/*",
-      ],
-      "@types": [
-        "./packages/types/src/index.ts",
-      ],
-      "@ui/*": [
-        "./packages/ui/src/*",
-      ],
-    },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -36,6 +18,7 @@
     "jsxImportSource": "react",
     "rootDir": ".",
     "outDir": "./dist",
+    "declaration": true,
   },
   "references": [
     {

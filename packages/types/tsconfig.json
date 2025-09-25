@@ -3,4 +3,9 @@
   "include": [
     "src/**/*",
   ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": ".",
+  },
 }

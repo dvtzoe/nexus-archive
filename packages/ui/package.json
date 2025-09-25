@@ -3,19 +3,25 @@
   "type": "module",
   "version": "0.1.0",
   "description": "ui components for nexus-archive",
+  "exports": {
+    "./components/*": "./src/components/*",
+    "./utils/*": "./src/utils/*",
+    "./styles/*": "./src/styles/*"
+  },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "clean": "rm -rf dist",
+    "build": "tsc --build",
+    "dev": "tsc --build --watch",
+    "clean": "rm -rf ./dist",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "typecheck": "tsc --noEmit"
   },
   "files": [
-    "dist"
+    "./dist"
   ],
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
+    "@nexus-archive/types": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.6",
