@@ -1,12 +1,20 @@
 {
-  "extends": ["../../tsconfig.json", "astro/tsconfigs/strict"],
-  "include": [".astro/types.d.ts", "**/*"],
+  "extends": [
+    "../../tsconfig.json",
+    "astro/tsconfigs/strict"
+  ],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": ".",
     "paths": {
-      "@layouts/*": ["./src/layouts/*"]
-    }
-  }
+      "@/*": [
+        "./src/*"
+      ],
+    },
+  },
 }

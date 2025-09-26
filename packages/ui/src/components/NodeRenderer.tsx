@@ -8,10 +8,10 @@ const NodeRenderer = async ({
   node: string;
 }) => {
   const REPO: Map<string, string> = new Map<string, string>([
-    ["default", "http://localhost:3000"],
+    ["default", "https://nexus-repo.mooo.com"],
   ]);
 
-  const baseUrl = REPO.get(repo || "default") || "http://localhost:3000";
+  const baseUrl = REPO.get(repo || "default") || "https://nexus-repo.mooo.com";
 
   let nodePointerResponse: Response;
   try {

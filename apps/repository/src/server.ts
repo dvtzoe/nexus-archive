@@ -3,20 +3,33 @@ import * as Fastify from "fastify";
 import entryPointsApi from "./entry_points.js";
 import nodeApi from "./node.js";
 
-const fastify = Fastify.fastify({ logger: true });
+const tlsKey = process.env.REPOSITORY_TLS_KEY;
+const tlsCert = process.env.REPOSITORY_TLS_CERT;
 
-// Register CORS
-fastify.register(cors, {
-  origin: true,
-});
-
-nodeApi(fastify);
-entryPointsApi(fastify);
+const fastify = Fastify.fastify({
+  logger: true,
+  trustProxy: true,
+  https:
+    tlsKey && tlsCert
+      ? {
+          key: tlsKey,
+          cert: tlsCert,
+        }
+      : null,
+})
+  .register(cors, {
+    origin: true,
+  })
+  .register(nodeApi)
+  .register(entryPointsApi);
 
 const start = async () => {
+  const port = Number(process.env.REPOSITORY_PORT || process.env.PORT) || 39402;
+  const host = process.env.REPOSITORY_HOST || "localhost";
+
   try {
-    await fastify.listen({ port: 3000, host: process.env.HOST || "localhost" });
-    console.log("Server is running at http://localhost:3000");
+    await fastify.listen({ port, host });
+    fastify.log.info(`Server is running at http://${host}:${port}`);
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
