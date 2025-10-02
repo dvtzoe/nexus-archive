@@ -1,0 +1,36 @@
+{
+  "name": "@nexus-archive/repo-db",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Repository server's database for nexus-archive",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --build --watch",
+    "clean": "rm -rf ./dist",
+    "lint": "biome check . && prisma format --check",
+    "lint:fix": "biome check --write . && prisma format",
+    "typecheck": "tsc --noEmit && prisma validate"
+  },
+  "include": [
+    "./src"
+  ],
+  "files": [
+    "./dist"
+  ],
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "prisma": "^6.16.3"
+  }
+}

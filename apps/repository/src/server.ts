@@ -1,7 +1,7 @@
 import cors from "@fastify/cors";
 import * as Fastify from "fastify";
-import entryPointsApi from "./entry_points.js";
-import nodeApi from "./node.js";
+import entryPointsGet from "./entry_points.js";
+import vertexGet from "./vertex.js";
 
 const tlsKey = process.env.REPOSITORY_TLS_KEY;
 const tlsCert = process.env.REPOSITORY_TLS_CERT;
@@ -20,8 +20,8 @@ const fastify = Fastify.fastify({
   .register(cors, {
     origin: true,
   })
-  .register(nodeApi)
-  .register(entryPointsApi);
+  .register(vertexGet)
+  .register(entryPointsGet);
 
 const start = async () => {
   const port = Number(process.env.REPOSITORY_PORT || process.env.PORT) || 39402;

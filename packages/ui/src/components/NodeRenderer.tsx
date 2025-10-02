@@ -1,5 +1,3 @@
-import type { NodePointer } from "@nexus-archive/types";
-
 const NodeRenderer = async ({
   repo,
   node,
@@ -25,7 +23,7 @@ const NodeRenderer = async ({
     return <div>Error fetching node data: {errorMessage}</div>;
   }
 
-  const nodeData: NodePointer = await nodePointerResponse.json();
+  const nodeData = await nodePointerResponse.json();
   const nodeAddress = nodeData.address;
 
   let nodeContentResponse: Response;

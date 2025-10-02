@@ -1,28 +1,17 @@
 # Nexus Archive
 
-A node-link-based publishing platform.
+A graph-based publishing platform.
 
 ## Development
 
-### Setup
-
+Clone this repo
 ```bash
-pnpm install
+git clone https://github.com/dvtzoe/nexus-archive
 ```
 
-### Running
-
+Install dependencies
 ```bash
-# Build the web app
-pnpm build:web
-
-# Build the repository server
-pnpm build:repo
-
-
-# Start the web app. Make sure to build the web first
-pnpm run:web
-
-# Start the repository server. Make sure to build the repo first
-pnpm run:repo
+pnpm i
 ```
+
+That's it i guess, I don't know what to write in the README yet

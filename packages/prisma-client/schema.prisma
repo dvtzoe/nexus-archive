@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../packages/prisma-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("REPO_DATABASE_URL")
+}
+
+model Account {
+  name     String   @id
+  vertices Vertex[]
+}
+
+model Vertex {
+  owner        String
+  ownerAccount Account @relation(fields: [owner], references: [name])
+  name         String
+
+  source String
+
+  isEntryPoint Boolean @default(false)
+
+  @@id(name: "slug", [owner, name])
+}
