@@ -1,0 +1,11 @@
+---
+// import NodeRenderer from "@nexus-archive/ui/components/NodeRenderer.tsx";
+import Layout from "@/layouts/Layout.astro";
+import VertexRenderer from "@nexus-archive/ui/components/VertexRenderer.tsx";
+
+const { slug } = Astro.params as { slug: string };
+---
+
+<Layout>
+  <VertexRenderer repo="localhost:39402" slug={slug} />
+</Layout>

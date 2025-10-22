@@ -6,7 +6,7 @@
   "main": "./dist/src/server.js",
   "scripts": {
     "build": "tsc --build",
-    "dev": "tsc --build --watch & nodemon --watch ./dist --exec node ./dist/server.js",
+    "dev": "tsx watch ./src/server.ts",
     "start": "node ./dist/src/server.js",
     "clean": "rm -rf ./dist",
     "lint": "biome check .",
@@ -24,6 +24,7 @@
   },
   "packageManager": "pnpm@10.15.1",
   "devDependencies": {
+    "tsx": "^4.20.6",
     "typescript": "^5.9.2"
   }
 }
