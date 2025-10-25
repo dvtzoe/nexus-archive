@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 const saltRounds = 10;
 
 export default async function (fastify: FastifyInstance) {
-  fastify.post("/signup", async (request, reply) => {
+  fastify.post("/auth/signup", async (request, reply) => {
     const { accountName, password } = request.body as {
       accountName: string;
       password: string;
