@@ -11,9 +11,6 @@ export default defineConfig({
   },
 
   integrations: [react()],
-  redirects: {
-    "/": "/home",
-  },
   output: "server",
   adapter: node({
     mode: "standalone",

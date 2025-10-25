@@ -1,24 +1,14 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "target": "es2022",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "rootDir": ".",
-    "outDir": "./dist",
-    "declaration": true,
+    "allowSyntheticDefaultImports": true
   },
   "references": [
     {

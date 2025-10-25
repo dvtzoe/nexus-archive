@@ -4,8 +4,17 @@
     "src/**/*",
   ],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": ".",
+    "paths": {
+      "@ui/*": [
+        "./src/*"
+      ]
+    }
   },
 }

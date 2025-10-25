@@ -4,8 +4,16 @@
     "./src/**/*",
   ],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
   },
 }

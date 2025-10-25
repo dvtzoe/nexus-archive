@@ -1,12 +1,26 @@
 {
-  "extends": ["../../tsconfig.json", "astro/tsconfigs/strict"],
-  "include": [".astro/types.d.ts", "**/*"],
+  "extends": [
+    "../../tsconfig.json",
+    "astro/tsconfigs/strict",
+  ],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*",
+  ],
   "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": [
+        "./src/*",
+      ],
+      "@ui/*": [
+        "../../packages/ui/src/*",
+      ],
+    },
+  },
 }

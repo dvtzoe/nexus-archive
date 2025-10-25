@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SignupForm } from "@nexus-archive/ui/components/signup-form.tsx";
+---
+
+<Layout>
+  <div class="flex min-h-screen flex-col justify-center">
+    <div class="flex flex-row justify-center">
+      <div class="w-1/4">
+        <SignupForm client:load />
+      </div>
+    </div>
+  </div>
+</Layout>

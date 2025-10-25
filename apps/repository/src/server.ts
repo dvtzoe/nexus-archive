@@ -1,7 +1,8 @@
 import cors from "@fastify/cors";
 import * as Fastify from "fastify";
-import entryPointsGet from "./entry_points.js";
-import vertexGet from "./vertex.js";
+import entryPointsGet from "./entry_points";
+import signup from "./signup";
+import vertexGet from "./vertex";
 
 const tlsKey = process.env.REPOSITORY_TLS_KEY;
 const tlsCert = process.env.REPOSITORY_TLS_CERT;
@@ -20,6 +21,7 @@ const fastify = Fastify.fastify({
   .register(cors, {
     origin: true,
   })
+  .register(signup)
   .register(vertexGet)
   .register(entryPointsGet);
 

@@ -1,7 +1,7 @@
 import { prisma } from "@nexus-archive/repo-db";
-import type * as Fastify from "fastify";
+import type { FastifyInstance } from "fastify";
 
-const vertexGet = (fastify: Fastify.FastifyInstance) => {
+const vertexGet = (fastify: FastifyInstance) => {
   fastify.get("/v1/vertex/:slug", async (request, reply) => {
     const { slug } = request.params as { slug: string };
     const [owner, name] = slug.split("/");
