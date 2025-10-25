@@ -1,7 +1,3 @@
-import { useState } from "react";
-import { GalleryVerticalEnd } from "lucide-react";
-
-import { cn } from "@ui/lib/utils";
 import { Button } from "@ui/components/ui/button";
 import {
   Field,
@@ -11,6 +7,9 @@ import {
   // FieldSeparator,
 } from "@ui/components/ui/field";
 import { Input } from "@ui/components/ui/input";
+import { cn } from "@ui/lib/utils";
+// import { GalleryVerticalEnd } from "lucide-react";
+import { useState } from "react";
 
 export function SignupForm({
   className,
@@ -29,7 +28,7 @@ export function SignupForm({
     setSuccess(false);
 
     try {
-      const response = await fetch("http://localhost:39402/signup", {
+      const response = await fetch("http://localhost:39402/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,8 +42,8 @@ export function SignupForm({
       }
 
       setSuccess(true);
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error) {
+      setError((error as { message: string }).message);
     } finally {
       setLoading(false);
     }

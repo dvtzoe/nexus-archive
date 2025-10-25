@@ -1,8 +1,8 @@
 import cors from "@fastify/cors";
 import * as Fastify from "fastify";
 import entryPointsGet from "./entry_points";
-import signup from "./signup";
 import signin from "./login";
+import signup from "./signup";
 import vertexGet from "./vertex";
 
 const tlsKey = process.env.REPOSITORY_TLS_KEY;
@@ -14,9 +14,9 @@ const fastify = Fastify.fastify({
   https:
     tlsKey && tlsCert
       ? {
-        key: tlsKey,
-        cert: tlsCert,
-      }
+          key: tlsKey,
+          cert: tlsCert,
+        }
       : null,
 })
   .register(cors, {
