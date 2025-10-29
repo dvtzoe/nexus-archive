@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.json",
-  "include": [
-    "src/**/*",
-  ],
+  "include": ["src/**/*"],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -12,9 +10,7 @@
     "outDir": "./dist",
     "rootDir": ".",
     "paths": {
-      "@ui/*": [
-        "./src/*"
-      ]
+      "@ui/*": ["./src/*"]
     }
-  },
+  }
 }

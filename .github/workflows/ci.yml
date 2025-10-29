@@ -41,11 +41,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint with Biome (repository and types packages)
-        run: |
-          cd apps/repository && pnpm lint
-          cd ../../packages/types && pnpm lint
-
-      - name: Format check with Prettier (web app)
-        run: |
-          cd apps/web && pnpm lint
+      - name: Lint and not fix
+        run: pnpm lint

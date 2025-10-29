@@ -12,8 +12,8 @@
     "build": "tsc --build",
     "dev": "tsc --build --watch",
     "clean": "rm -rf ./dist",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
   },
   "files": [

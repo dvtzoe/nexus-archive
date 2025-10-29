@@ -1,9 +1,9 @@
-import cors from "@fastify/cors";
-import * as Fastify from "fastify";
 import entryPointsGet from "./entry_points";
 import signin from "./login";
 import signup from "./signup";
 import vertexGet from "./vertex";
+import cors from "@fastify/cors";
+import * as Fastify from "fastify";
 
 const tlsKey = process.env.REPOSITORY_TLS_KEY;
 const tlsCert = process.env.REPOSITORY_TLS_CERT;
