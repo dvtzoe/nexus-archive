@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SidebarPage from "@nexus-archive/ui/components/SidebarPage.tsx";
+---
+
+<Layout>
+  <SidebarPage client:load>
+    <slot />
+  </SidebarPage>
+</Layout>
