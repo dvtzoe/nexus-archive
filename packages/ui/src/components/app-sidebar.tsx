@@ -22,8 +22,15 @@ const data = {
   navMain: [
     {
       title: "Discover",
-      url: "#",
+      url: "/discover",
       icon: Telescope,
+      isActive: true,
+      items: [
+        {
+          title: "Entry Points",
+          url: "/entry-points",
+        },
+      ],
     },
   ],
   navSecondary: [

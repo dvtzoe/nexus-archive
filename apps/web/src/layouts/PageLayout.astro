@@ -1,0 +1,10 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Page from "@nexus-archive/ui/components/Page.tsx";
+---
+
+<Layout>
+  <Page client:load>
+    <slot />
+  </Page>
+</Layout>
