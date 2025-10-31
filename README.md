@@ -5,11 +5,13 @@ A graph-based publishing platform.
 ## Development
 
 Clone this repo
+
 ```bash
 git clone https://github.com/dvtzoe/nexus-archive
 ```
 
 Install dependencies
+
 ```bash
 pnpm i
 ```

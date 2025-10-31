@@ -9,8 +9,6 @@
     "dev": "dotenvx run -- tsx watch ./src/server.ts",
     "start": "dotenvx run -- node ./dist/src/server.js",
     "clean": "rm -rf ./dist",
-    "lint": "prettier --check .",
-    "lint:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
   },
   "files": [

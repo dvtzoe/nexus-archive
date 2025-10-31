@@ -8,8 +8,6 @@
     "preview": "astro preview",
     "start": "astro preview",
     "astro": "astro",
-    "lint": "prettier --check .",
-    "lint:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
   },
   "files": [

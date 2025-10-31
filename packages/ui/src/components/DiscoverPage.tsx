@@ -1,10 +1,13 @@
+import { ArrowUpFromDot } from "lucide-react";
 import React from "react";
 
-import { ArrowUpFromDot } from "lucide-react";
-
 export default (): React.ReactNode => {
-
-  const card = ({ title, description, link, icon }: {
+  const card = ({
+    title,
+    description,
+    link,
+    icon,
+  }: {
     title: string;
     description: string;
     link: string;
@@ -34,8 +37,7 @@ export default (): React.ReactNode => {
           link: "/entry-points",
           icon: <ArrowUpFromDot className="mb-4 h-16 w-16 text-primary" />,
         })}
-
       </div>
     </div>
-  )
-}
+  );
+};

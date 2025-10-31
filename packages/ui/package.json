@@ -12,8 +12,6 @@
     "build": "tsc --build",
     "dev": "tsc --build --watch",
     "clean": "rm -rf ./dist",
-    "lint": "prettier --check .",
-    "lint:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
   },
   "files": [
