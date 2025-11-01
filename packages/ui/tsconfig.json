@@ -11,6 +11,9 @@
     "rootDir": ".",
     "paths": {
       "@ui/*": ["./src/*"]
-    }
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   }
 }

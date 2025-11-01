@@ -10,6 +10,9 @@
     "rootDir": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   }
 }
