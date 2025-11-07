@@ -22,7 +22,6 @@
   "files": [
     "./dist"
   ],
-  "packageManager": "pnpm@10.15.1",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^5.1.1",

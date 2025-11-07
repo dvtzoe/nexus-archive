@@ -16,7 +16,6 @@
   "files": [
     "./dist"
   ],
-  "packageManager": "pnpm@10.15.1",
   "dependencies": {
     "@nexus-archive/types": "workspace:*",
     "@radix-ui/react-avatar": "^1.1.10",
