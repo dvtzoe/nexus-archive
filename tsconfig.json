@@ -12,10 +12,7 @@
   },
   "references": [
     {
-      "path": "./apps/repo"
-    },
-    {
-      "path": "./apps/web"
+      "path": "./apps/repository"
     },
     {
       "path": "./packages/repo-db"
