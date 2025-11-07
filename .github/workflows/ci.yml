@@ -41,5 +41,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint and not fix
-        run: pnpm lint
+      - name: Run ci script
+        run: pnpm ci
