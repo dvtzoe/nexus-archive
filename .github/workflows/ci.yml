@@ -41,5 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Prisma generate
+        run: pnpm repo-db:gen
+
       - name: Run ci script
         run: pnpm run ci
