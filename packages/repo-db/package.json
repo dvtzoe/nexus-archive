@@ -13,8 +13,7 @@
     "dev": "tsc --build --watch",
     "clean": "rm -rf ./dist",
     "format": "prisma format",
-    "format:check": "prisma format --check",
-    "typecheck": "prisma validate"
+    "format:check": "prisma format --check"
   },
   "include": [
     "./src"
