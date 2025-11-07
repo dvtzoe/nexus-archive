@@ -11,8 +11,7 @@
   "scripts": {
     "build": "tsc --build",
     "dev": "tsc --build --watch",
-    "clean": "rm -rf ./dist",
-    "typecheck": "tsc --noEmit"
+    "clean": "rm -rf ./dist"
   },
   "include": [
     "./src"

@@ -8,8 +8,7 @@
     "build": "tsc --build",
     "dev": "dotenvx run -- tsx watch ./src/server.ts",
     "start": "dotenvx run -- node ./dist/src/server.js",
-    "clean": "rm -rf ./dist",
-    "typecheck": "tsc --noEmit"
+    "clean": "rm -rf ./dist"
   },
   "files": [
     "./dist"

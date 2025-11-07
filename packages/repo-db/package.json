@@ -12,9 +12,9 @@
     "build": "tsc --build",
     "dev": "tsc --build --watch",
     "clean": "rm -rf ./dist",
-    "lint": "prisma format --check",
-    "lint:fix": "prisma format",
-    "typecheck": "tsc --noEmit && prisma validate"
+    "format": "prisma format",
+    "format:check": "prisma format --check",
+    "typecheck": "prisma validate"
   },
   "include": [
     "./src"
